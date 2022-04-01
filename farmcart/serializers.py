@@ -1,14 +1,14 @@
-from zoneinfo import available_timezones
+# from zoneinfo import available_timezones
 from rest_framework import serializers
-from .models import Cart , Product
+from .models import Product
 
 
 
-class CartSerializer(serializers.ModelSerializer):
-    id = serializers.UUIDField(read_only = True)
-    class Meta:
-        model = Cart
-        fields = ['id']
+# class CartSerializer(serializers.ModelSerializer):
+#     id = serializers.UUIDField(read_only = True)
+#     class Meta:
+#         model = Cart
+#         fields = ['id']
 
 
 class ProductSerializer(serializers.ModelSerializer):
