@@ -13,19 +13,19 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from distutils.debug import DEBUG
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = '8061(w*8an7*ld*!n=cbu%@r!*-iwkt*8fmq#zcxcb79(u&705'
-# os.environ['SECRET_KEY']
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [] 
+ALLOWED_HOSTS = ['farm-cartte.herokuapp.com', '127.0.0.1'] 
 
 # Application definition
 
@@ -61,13 +61,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cart',
-        'HOST': 'localhost',
-        'USER' : 'root',
-        'PASSWORD' : '7991'
-    }
+    'default': dj_database_url.config()
 }
 
 
