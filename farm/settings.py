@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+from distutils.debug import DEBUG
 from pathlib import Path
 import os
 
@@ -22,8 +23,9 @@ SECRET_KEY = '8061(w*8an7*ld*!n=cbu%@r!*-iwkt*8fmq#zcxcb79(u&705'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
+DEBUG = True
 
-ALLOWED_HOSTS = ['shoppe-cartte.herokuapp.com', '127.0.0.1'] 
+ALLOWED_HOSTS = [] 
 
 # Application definition
 
