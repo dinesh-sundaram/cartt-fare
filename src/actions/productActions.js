@@ -9,11 +9,13 @@ export const fetchProducts = () => async (dispatch) => {
 	// const res = await fetch("/api/products");
 	// const res = await fetch("http://127.0.0.1:8000/cart/products/");
 
-	const res = await axios.get("http://127.0.0.1:8000/cart/products/");
+	const res = await axios.get(
+		"https://farm-cartte.herokuapp.com/cart/products/"
+	);
 
 	// const data = await res.json();
 	// const data = res.data;
-	// console.log("response", data);
+	console.log("response", res.data);
 	dispatch({
 		type: FETCH_PRODUCTS,
 		payload: res.data,
